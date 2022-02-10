@@ -8,7 +8,7 @@
 				<div class="login-form">
 					<h2>회원가입을 축하합니다!</h2>
 					<form action="login.me">
-						<button type="submit" class="site-btn login-btn">홈으로</button>
+						<button type="submit" class="site-btn login-btn">로그인</button>
 					</form>
 				</div>
 			</div>

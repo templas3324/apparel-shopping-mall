@@ -8,8 +8,8 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="breadcrumb-text product-more">
-					<a href=""><i class="fa fa-home"></i> Home</a>
-					<a href="shop.do">Shop</a>
+					<a href="/"><i class="fa fa-home"></i> Home</a>
+					<a href="#">Shop</a>
 					<span>Detail</span>
 				</div>
 			</div>
@@ -108,22 +108,24 @@
 								</div>
 							</div>
 							
-							<div class="quantity">
+							<div class="quantity">   <!-- 수량 -->
 								<div class="pro-qty">
-									<input type="text" value="1">										<!-- 수량X -->
+									<input type="text" value="1">										
 								</div>
-								<a href="#" class="primary-btn pd-cart">담기</a>						
+								<a href="getBaskets.do" class="primary-btn pd-cart">담기</a>	 <!-- 장바구니 담기 -->					
 							</div>							
 							<div class="quantity">
-								<a href="#" class="primary-btn pd-cart">장바구니</a>
+								<a href="baskets.do" class="primary-btn pd-cart">장바구니</a>
 									
 								<a href="#" class="primary-btn pd-cart" style="margin-left: 2px;">결제하기</a>
 							</div>
-							<!-- <ul class="pd-tags">
+							<!-- 
+							<ul class="pd-tags">
 								<li>
 									<span>CATEGORIES 필요없음 </span>: More Accessories, Wallets & Cases
 								</li>
-							</ul> --> 							
+							</ul> 
+							--> 							
 						</div>						
 					</div>
 					

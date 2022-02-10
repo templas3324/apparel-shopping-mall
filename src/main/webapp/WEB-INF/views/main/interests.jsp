@@ -9,8 +9,9 @@
 		<div class="row">
 			<div class="col-lg-12">
 				<div class="breadcrumb-text product-more">
-					<a href=""><i class="fa fa-home"></i> Home</a> <a
-						href="./shop.html">마이페이지</a> <span>관심상품</span>
+					<a href=""><i class="fa fa-home"></i> Home</a> 
+					<a href="myPage.me">마이페이지</a> 
+					<span>관심상품</span>
 				</div>
 			</div>
 		</div>
@@ -26,25 +27,26 @@
 				<div class="filter-widget">
 					<h4 class="fw-title">마이페이지</h4>
 					<ul class="filter-catagories">
-						<li><a href="editInfo.me">정보수정</a></li>
+						<li><a href="editInfo.me">정보수정</a></li>
 						<li><a href="accumulated.me">적립금</a></li>
-						<li><a href="intests.me">관심상품</a></li>
+						<li><a href="intests.me">관심상품</a></li>
 						<li><a href="qna.me">QnA</a></li>
 					</ul>
 				</div>
 			</div>
 			<div class="col-lg-9">
-				<h3>관심상품</h3>
+				<h3>관심상품</h3>
 				<hr>
 				<div class="cart-table">
 					<table>
 						<thead>
 							<tr>
-								<th>사진</th>
+								<th>사진</th>
 								<th>상품명</th>
 								<th>가격</th>
-								<th>수량</th>
+								<th>수량</th>
 								<th>담기</th>
+								<th>삭제</th> <!-- 삭제 <i class="ti-close"></i> -->
 							</tr>
 						</thead>
 						<tbody> 
@@ -70,7 +72,7 @@
 								<td class="qua-col first-row">
 									<div class="quantity">
 										<div class="pro-qty">
-											<input type="text" id="basketAmount" value="1">
+											<input type="text" id="basketAmount" value="1"> 
 										</div>
 									</div>
 								</td>
@@ -93,6 +95,7 @@
 										</button>
 										</form>
 								</td>
+								<td class="close-td first-row"><i class="ti-close"></i></td> <!-- 삭제 -->
 							</tr>
 							</c:forEach>
 							

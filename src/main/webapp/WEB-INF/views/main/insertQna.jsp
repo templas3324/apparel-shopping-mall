@@ -49,9 +49,9 @@
 				<div class="filter-widget">
 					<h4 class="fw-title">마이페이지</h4>
 					<ul class="filter-catagories">
-						<li><a href="editInfo.me">정보수정</a></li>
+						<li><a href="editInfo.me">정보수정</a></li>
 						<li><a href="myaccumulated.me">적립금</a></li>
-						<li><a href="myinterests.do">관심상품</a></li>
+						<li><a href="myinterests.do">관심상품</a></li>
 						<li><a href="myqna.me">QnA</a></li>
 					</ul>
 				</div>

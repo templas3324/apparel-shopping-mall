@@ -1,19 +1,19 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 <!-- Footer Section Begin -->
 <footer class="footer-section">
-	<div class="container">
+	<!-- <div class="container">
 		<div class="row">
 			<div class="col-lg-3">
 				<div class="footer-left">
 					<div class="footer-logo">
-						<a href="#">
+						<a href="/">
 							<img src="img/footer-logo.png" alt="">
 						</a>
 					</div>
 					<ul>
-						<li>Address: 60-49 Road 11378 New York</li>
-						<li>Phone: +65 11.188.888</li>
-						<li>Email: hello.colorlib@gmail.com</li>
+						<li>Address: Seoul</li>
+						<li>Phone: 02-387-9373</li>
+						<li>Email: hello.oreot@gmail.com</li>
 					</ul>
 					<div class="footer-social">
 						<a href="#"><i class="fa fa-facebook"></i></a>
@@ -38,25 +38,31 @@
 				<div class="footer-widget">
 					<h5>My Account</h5>
 					<ul>
-						<li><a href="#">My Account</a></li>
+						<li><a href="myPage.me">My Account</a></li>
 						<li><a href="#">Contact</a></li>
-						<li><a href="#">Shopping Cart</a></li>
-						<li><a href="#">Shop</a></li>
+						<li><a href="baskets.do">Shopping Cart</a></li>
+						<li><a href="shop.do?lcategoriesNum=2&scategoriesNum=0">Shop</a></li>
 					</ul>
 				</div>
 			</div>
+			
 			<div class="col-lg-4">
 				<div class="newslatter-item">
 					<h5>Join Our Newsletter Now</h5>
 					<p>Get E-mail updates about our latest shop and special offers.</p>
+					 
 					<form action="#" class="subscribe-form">
 						<input type="text" placeholder="Enter Your Mail">
 						<button type="button">Subscribe</button>
 					</form>
+					 
 				</div>
 			</div>
+			
 		</div>
-	</div>
+	</div> 
+	-->
+	
 	<div class="copyright-reserved">
 		<div class="container">
 			<div class="row">
@@ -79,7 +85,9 @@
 			</div>
 		</div>
 	</div>
+	 
 </footer>
+
 <!-- Footer Section End -->
 
 <!-- Js Plugins -->

@@ -31,7 +31,7 @@
                                     <th class="p-name">상품명</th>
                                     <th>가격</th>
                                     <th>수량</th>
-                                    <th><i class="ti-close"></i></th>
+                                    <th>삭제</th> <!-- <i class="ti-close"></i> -->
                                 </tr>
                             </thead>
                             <tbody>

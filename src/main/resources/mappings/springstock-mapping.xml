@@ -11,6 +11,7 @@
 	]]>
 	</insert>
 	
+	<!-- 장바구니에 추가 -->
 	<insert id="insertBasketInfo">
 	<![CDATA[
 		INSERT INTO BASKETS (BASKET_NUM,MEMBER_NUM,OPTION_NUM,BASKET_AMOUNT)
@@ -18,25 +19,29 @@
 	]]>
 	</insert>
 	
+	<!-- 관심상품 등록 -->
 	<insert id="getInterests">
 	<![CDATA[
-		INSERT INTO INTERESTS (INTEREST_NUM,MEMBER_NUM,OPTION_NUM)
-    	VALUES((SELECT NVL(MAX(INTEREST_NUM),0)+1 FROM INTERESTS),#{memberNum},#{optionNum});
+		INSERT INTO INTERESTS (INTEREST_NUM,MEMBER_NUM,OPTION_NUM) 
+    	VALUES((SELECT NVL(MAX(INTEREST_NUM),0)+1 FROM INTERESTS),#{memberNum},#{optionNum})
 	]]>
 	</insert>
 	
+	<!-- 관심상품 삭제 -->
 	<delete id="deleteInterests">
 	<![CDATA[
 		DELETE FROM INTERESTS
 			WHERE MEMBER_NUM=#{memberNum} AND OPTION_NUM=#{optionNum}
 	]]>
 	</delete>
+	
 	<select id="getMemberNum" resultType="_int">
 	<![CDATA[
 		select MEMBER_NUM from MEMBERS where MEMBER_ID=#{id}
 	]]>
 	</select>
 	
+	<!-- 관심상품 정보불러오기 -->
 	<select id="getInterestInfo" resultType="com.springcompany.biz.stock.dao.StockVO">
 	<![CDATA[
 		SELECT
@@ -56,6 +61,7 @@
 	]]>
 	</select>
 	
+	<!-- 장바구니 정보 불러오기 -->
 	<select id="getBasketInfo" resultType="com.springcompany.biz.stock.dao.StockVO">
 	<![CDATA[
 		SELECT 

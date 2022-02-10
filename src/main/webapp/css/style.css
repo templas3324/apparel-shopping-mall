@@ -1501,7 +1501,7 @@ ol {
 
 .footer-section {
 	background: #191919;
-	padding-top: 75px;
+	/* padding-top: 75px; */ 
 }
 
 .footer-left {
@@ -1723,6 +1723,7 @@ ol {
 
 .filter-widget .fw-title {
 	color: #252525;
+	font-family: 'Nanum Gothic', sans-serif; /* 2월8일 추가 상화 */
 	font-size: 22px;
 	font-weight: 700;
 	margin-bottom: 26px;
@@ -1735,6 +1736,7 @@ ol {
 .filter-widget .filter-catagories li a {
 	display: inline-block;
 	color: #636363;
+	font-family: 'Nanum Gothic', sans-serif; /* 2월8일 추가 상화 */
 	font-size: 16px;
 	line-height: 39px;
 }

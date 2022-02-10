@@ -23,11 +23,11 @@
 		<div class="row">
 			<div class="col-lg-6 offset-lg-3">
 				<div class="register-form">
-					<h2> 회원정보 수정 </h2>
+					<h2> 회원정보 수정 </h2>
 					
 					<form action="editInfo.me" method="post">
 						<div class="group-input">
-							<label for="memberId">아이디*</label> 
+							<label for="memberId">아이디*</label> 
 							<input type="text" id="memberId" name="memberId" value="${main.memberId}" disabled>
 						</div>
 						<div class="group-input">
@@ -40,17 +40,16 @@
 								<!-- 일단 스크립트는 생략하고 내부에서 간단하게 비교할게용...; -->
 						</div>
 						<div class="group-input">
-							<label for="memberName">이름*<br><br>
-							<input type="text" name="memberName" value="${main.memberName}" disabled>
-							</label>
+							<label for="memberName">이름*<br><br> </label>
+								<input type="text" name="memberName" value="${main.memberName}" disabled>
 						</div>
 						<div class="group-input">
-							<label for="memberEmail">이메일*</label> <input type="text"
-								id="memberEmail" name="memberEmail" value="${main.memberEmail}">
+							<label for="memberEmail">이메일*</label> 
+							<input type="text" id="memberEmail" name="memberEmail" value="${main.memberEmail}">
 						</div>
 						<div class="group-input">
-							<label for="memberTel">전화번호*</label> <input type="text"
-								id="memberTel" name="memberTel" value="${main.memberTel}">
+							<label for="memberTel">전화번호*</label> 
+							<input type="text" id="memberTel" name="memberTel" value="${main.memberTel}">
 						</div>
 						<div class="group-input">
 									<fmt:parseNumber value="${main.year}" var="year"/>
@@ -81,7 +80,7 @@
 										</c:choose>
 									</c:forEach>
 								</select> 
-								<select name="day">
+								<select name="day">  <!-- class="selectpicker" style="height:30px" 성현 -->
 									<c:forEach begin="1" end="31" var="i">
 										<c:choose>
 											<c:when test="${day == i }">
@@ -105,7 +104,7 @@
 								회원가입을 제공합니다.</p>
 						-->
 						</div> 
-						<button type="submit" class="site-btn register-btn">정보 수정</button>
+						<button type="submit" class="site-btn register-btn">정보 수정</button>
 					</form>
 				</div>
 			</div>

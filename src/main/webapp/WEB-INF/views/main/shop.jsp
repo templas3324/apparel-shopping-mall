@@ -57,14 +57,15 @@
 							<div class="col-lg-4 col-sm-6">
 								<div class="product-item">
 									<div class="pi-pic">
-										<img src="stockMainUpload/${stocklist.stockPhoto}" width="300" height="350" alt=""/>  <!-- img/products/product-1.jpg  ${stocklist.stockPhoto } -->
+										<img src="stockMainUpload/${stocklist.stockPhoto}" width="300" height="350" alt=""/>  <!--   ${stocklist.stockPhoto } -->
 																				<!-- <div class="sale pp-sale">Sale</div> 세일 -->
 										<div class="icon">
-											<i class="icon_heart_alt"></i>								<!-- 좋아요  -->
+											<!-- <a href="getInterests.do"></a> -->
+											<i class="icon_heart_alt"></i>			<!-- 관심상품  -->
 										</div>
 										<ul>
 											<li class="w-icon active">
-												<a href="#"><i class="icon_bag_alt"></i></a> 			<!-- 장바구니 -->
+												<a href="baskets.do"><i class="icon_bag_alt"></i></a> 			<!-- 장바구니 -->
 											</li>
 											<li class="quick-view">
 												<a href="product.do?stockNum=${stocklist.stockNum}">+ Quick View</a>				 			<!-- 상세보기 -->

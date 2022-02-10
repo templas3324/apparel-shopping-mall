@@ -5,7 +5,7 @@
 <%@taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 
 <%
-	UserVO member = (UserVO)session.getAttribute("member");
+	UserVO member = (UserVO)session.getAttribute("member"); 
 %>
 <!DOCTYPE html>
 <html lang="zxx">
@@ -16,12 +16,18 @@
 <meta name="keywords" content="Fashi, unica, creative, html">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
-<title>3조 Semi-Project</title>
+<title>OreoT</title>
 
 <!-- Google Font -->
 <link
 	href="https://fonts.googleapis.com/css?family=Muli:300,400,500,600,700,800,900&display=swap"
 	rel="stylesheet">
+<!-- 페이지가 다른 원본에 대한 연결을 설정하고 가능한 한 빨리 프로세스가 시작되기를 원한다는 것을 브라우저에 알립니다. -->
+<!-- 성현님 추가 한것 공부하고 적용 시켜보자
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet"> 
+-->
 
 <!-- Css Styles -->
 <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
@@ -70,14 +76,14 @@
 						<ul class="nav-right">
 							<li class="heart-icon"> 
 								
-								<a href="myinterests.do">
+								<a href="myinterests.do"> <!-- 관심상품 -->
 									<i class="icon_heart_alt"></i>
 									<span>${iseq}</span>
 								</a>
 							</li>
 							<li class="cart-icon">
 								
-								<a href="baskets.do">
+								<a href="baskets.do"> <!-- 장바구니 -->
 									<i class="icon_bag_alt"></i>
 									<span>${bseq}</span>
 								</a>
@@ -139,7 +145,7 @@
 							<%
 							if(member==null) {
 							%>
-							<li class="heart-icon"> <%-- 로그아웃 --%>
+							<li class="heart-icon"> <%-- 로그인 --%>
 								<a href="login.me">
 									<i class="icon_key_alt"></i>
 								</a>
@@ -168,7 +174,7 @@
 		<div class="nav-item">
 			<div class="container">
 				<!-- 반응형 -->
-				<nav class="nav-menu mobile-menu">					
+				<nav class="nav-menu mobile-menu" style="">					
 					<ul>					
 						<li>   <!-- li에서 class="active" 뺌: UI 이유 -->							
 							<a href="shop.do?lcategoriesNum=2&scategoriesNum=0">상의</a>								
