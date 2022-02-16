@@ -2,13 +2,21 @@
 	pageEncoding="UTF-8"%>
 <%@include file="/header.jsp"%>
 
+<style type="text/css"> 
+	/* 이미지 사이즈 */
+	img {
+		max-width: 100px;
+	 	max-height: 100px;
+	}
+</style>
+
     <!-- Breadcrumb Section Begin -->
     <div class="breacrumb-section">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
                     <div class="breadcrumb-text product-more">
-                        <a href="./home.html"><i class="fa fa-home"></i> Home</a>
+                        <a href="/"><i class="fa fa-home"></i> Home</a>
                         <span>장바구니</span>
                     </div>
                 </div>
@@ -31,19 +39,13 @@
                                     <th class="p-name">상품명</th>
                                     <th>가격</th>
                                     <th>수량</th>
-                                    <th>삭제</th> <!-- <i class="ti-close"></i> -->
+                                    <th><i class="ti-close"></i></th>
                                 </tr>
                             </thead>
                             <tbody>
                             	<c:set var="ini" value="홍길동" />
                             	<c:forEach items="${stock}" var="stock">
-                            	<c:set var="stockName" value="${stock.stockName}"/>
-                            	<%-- <c:set var="check" value="${stock.stockName}"/>
-                            	<c:if test="${ini == '홍길동' }">
-                            		<c:set var="check" value="바나나"/>
-                            		<c:set var="ini" value="강감찬"/>
-                            	</c:if>
-                            	<c:if test="${check != stockName }">  --%>
+                            		<c:set var="stockName" value="${stock.stockName}"/>
                             		<c:set var="stockPhoto" value="${stock.stockPhoto}"/>
                             		<c:set var="optionColor" value="${stock.optionColor}"/>
                             		<c:set var="optionSize" value="${stock.optionSize}"/>
@@ -51,8 +53,12 @@
                             		<c:set var="basketAmount" value="${stock.basketAmount}"/>
                             		
                                 <tr>
-                                	<td><input type="checkbox"/></td>
-                                    <td class="cart-pic first-row"><img src="${stockPhoto}" alt=""></td>
+                                	<td>
+                                		<input type="checkbox"/>
+                                	</td>
+                                    <td class="cart-pic first-row">
+                                    	<img src="${stockPhoto}" alt="">
+                                    </td>
                                     <td class="cart-title first-row">
                                         <h5>${stockName}</h5>
                                         <small>${optionColor} / ${optionSize} </small>
@@ -67,7 +73,7 @@
                                     </td>
                                     <td class="close-td first-row"><i class="ti-close"></i></td>
                                 </tr>
-                            	<%-- </c:if> --%>
+                            	
                                </c:forEach>
                             </tbody>
                         </table>

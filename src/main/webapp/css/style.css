@@ -443,7 +443,8 @@ ol {
 	position: relative;
 }
 
-.inner-header .advanced-search .category-btn:before {
+/* 가운데 바 */
+.inner-header .advanced-search .category-btn:before { /* category-btn */
 	position: absolute;
 	right: 0;
 	top: 14px;
@@ -453,20 +454,24 @@ ol {
 	content: "";
 }
 
+/* 셀렉트 아래꺽쇠 */
 .inner-header .advanced-search .category-btn:after {
 	position: absolute;
 	right: 11px;
 	top: 10px;
-	content: "3";
+	/* content: "3"; */
 	font-family: "ElegantIcons";
 	font-size: 16px;
 	color: #b2b2b2;
 }
 
 .inner-header .advanced-search .input-group {
-	max-width: 70%;
+	max-width: 90%; /* 원래_ 70%; */
+	min-width: 90%; /* 추가_ 최소 너비 비율  2월16일 */
 	height: 100%;
+	
 }
+
 
 .inner-header .advanced-search .input-group input {
 	width: 100%;
@@ -481,7 +486,7 @@ ol {
 	font-size: 16px;
 	color: #ffffff;
 	position: absolute;
-	right: -3px;
+	right: -180px; /* -3 */
 	top: -1px;
 	border: 1px solid #e7ab3c;
 	background: #e7ab3c;

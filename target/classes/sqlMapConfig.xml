@@ -6,8 +6,8 @@
 
 	<!-- Alias 설정(별칭 설정) -->
 	<typeAliases>
-		<typeAlias alias="main" type="com.springcompany.biz.main.dao.MainVO"/>
-		<typeAlias alias="member" type="com.springcompany.biz.user.dao.UserVO"/>
+		<typeAlias alias="main" type="com.oreot.biz.main.dao.MainVO"/>
+		<typeAlias alias="member" type="com.oreot.biz.user.dao.UserVO"/>
 	</typeAliases>
 
 	<!-- Sql Mapper 설정 -->

@@ -1,7 +1,15 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="com.springcompany.biz.user.dao.UserVO" %>
+<%@ page import="com.oreot.biz.user.dao.UserVO" %>
 <%@taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 <%@include file="/header.jsp"%>
+
+<style type="text/css">
+	/* 이미지 사이즈 */
+	img {
+		max-width: 100px;
+	 	max-height: 100px;
+	}
+</style>
 
 <!-- Breadcrumb Section Begin -->
 <div class="breacrumb-section">

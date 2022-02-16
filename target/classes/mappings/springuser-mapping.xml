@@ -4,7 +4,7 @@
 <!-- <mapper namespace="mappings.springboard-mapping"> -->
 <mapper namespace="userDAO">
 
-	<select id="getMemberInfo" resultType="com.springcompany.biz.user.dao.UserVO">
+	<select id="getMemberInfo" resultType="com.oreot.biz.user.dao.UserVO">
 	<![CDATA[
 		select 
 			MEMBER_NUM as memberNum,
@@ -21,7 +21,7 @@
 	]]>
 	</select>
 	
-	<select id="getBasketNum" resultType="com.springcompany.biz.stock.dao.StockVO">
+	<select id="getBasketNum" resultType="com.oreot.biz.stock.dao.StockVO">
 	<![CDATA[
 		SELECT 
 			T1.BASKET_NUM,

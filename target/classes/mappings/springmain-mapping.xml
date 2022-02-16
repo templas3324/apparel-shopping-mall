@@ -36,18 +36,18 @@
 	]]>
 	</insert>
 		
-	<select id="getBoardList_T" resultType="com.springcompany.biz.main.dao.MainVO">
+	<select id="getBoardList_T" resultType="com.oreot.biz.main.dao.MainVO">
 	<![CDATA[	
 		select * from springboard where title like '%'||#{searchKeyword}||'%' order by seq desc
 	]]>
 	</select>
 	
-	<select id="getBoardList_C" resultType="com.springcompany.biz.main.dao.MainVO">
+	<select id="getBoardList_C" resultType="com.oreot.biz.main.dao.MainVO">
 	<![CDATA[
 		select * from springboard where content like '%'||#{searchKeyword}||'%' order by seq desc
 	]]>
 	</select>
-	<select id="getCategoriesList" resultType="com.springcompany.biz.stock.dao.StockVO">
+	<select id="getCategoriesList" resultType="com.oreot.biz.stock.dao.StockVO">
 	<![CDATA[
 		select
 			SCATEGORIES_NUM as scategoriesNum,
@@ -58,7 +58,7 @@
 	]]>
 	</select>
 	
-	<select id="getStockList" resultType="com.springcompany.biz.main.dao.MainVO">
+	<select id="getStockList" resultType="com.oreot.biz.main.dao.MainVO">
 	<![CDATA[
 		select
 			STOCK_NUM as stockNum,
@@ -67,7 +67,7 @@
 			order by STOCK_NUM
 	]]>
 	</select>
-	<select id="getMyReviewList" resultType="com.springcompany.biz.stock.dao.StockVO">
+	<select id="getMyReviewList" resultType="com.oreot.biz.stock.dao.StockVO">
 	<![CDATA[
 		select 
 			STOCK_NAME as stockName,
@@ -82,7 +82,7 @@
 	]]>
 	</select>
 	
-	<select id="getMemberAccumulated" resultType="com.springcompany.biz.main.dao.MainVO">
+	<select id="getMemberAccumulated" resultType="com.oreot.biz.main.dao.MainVO">
 	<![CDATA[
 		select 
 			ACCUMULATED_HISTORY as accumulatedHistory,
@@ -94,7 +94,7 @@
 	]]>
 	</select>
 	
-	<select id="getMemberInfo" resultType="com.springcompany.biz.main.dao.MainVO">
+	<select id="getMemberInfo" resultType="com.oreot.biz.main.dao.MainVO">
 	<![CDATA[
 		SELECT
 			MEMBER_NUM as memberNum,
@@ -109,7 +109,7 @@
 	]]>
 	</select>
 	
-	<select id="getMyQnaList" resultType="com.springcompany.biz.main.dao.MainVO">
+	<select id="getMyQnaList" resultType="com.oreot.biz.main.dao.MainVO">
 	<![CDATA[
 		SELECT
 			INQUIRE_NUM as inquireNum,
@@ -122,7 +122,7 @@
 	]]>
 	</select>
 	
-	<select id="getMyQna" resultType="com.springcompany.biz.main.dao.MainVO">
+	<select id="getMyQna" resultType="com.oreot.biz.main.dao.MainVO">
 	<![CDATA[
 		SELECT 
 			INQUIRE_NUM as inquireNum,
@@ -138,7 +138,7 @@
 	]]>
 	</select>
 	
-	<select id="getNoitce" resultType="com.springcompany.biz.main.dao.MainVO">
+	<select id="getNoitce" resultType="com.oreot.biz.main.dao.MainVO">
 	<![CDATA[
 		SELECT
 			NOTICE_NUM as noticeNum,
@@ -150,7 +150,7 @@
 	]]>
 	</select>
 	
-	<select id="getQnaNotice" resultType="com.springcompany.biz.main.dao.MainVO">
+	<select id="getQnaNotice" resultType="com.oreot.biz.main.dao.MainVO">
 	<![CDATA[
 		SELECT
 			NOTICE_NUM as noticeNum,

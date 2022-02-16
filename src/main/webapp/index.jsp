@@ -54,7 +54,7 @@
 							<a href="shop.do?lcategoriesNum=5&scategoriesNum=0" class="primary-btn">Shop Now</a>
 						</div>
 					</div>
-					<div class="off-card"> <!-- 동그라미 단추 인듯. -->
+					<div class="off-card"> <!-- 동그라미 단추. -->
 						<h2>
 							Sale <span>~30%</span>
 						</h2>

@@ -1,12 +1,14 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
-<%@ page import="com.springcompany.biz.user.dao.UserVO" %>
-<%@ page import="com.springcompany.biz.stock.dao.StockVO" %>
+<%@ page import="com.oreot.biz.user.dao.UserVO" %>
+<%@ page import="com.oreot.biz.stock.dao.StockVO" %>
 <%@ page import="java.util.List" %>
 <%@taglib uri="http://java.sun.com/jstl/core_rt" prefix="c"%>
 
 <%
 	UserVO member = (UserVO)session.getAttribute("member"); 
 %>
+
+
 <!DOCTYPE html>
 <html lang="zxx">
 
@@ -29,6 +31,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700;800&display=swap" rel="stylesheet"> 
 -->
 
+
 <!-- Css Styles -->
 <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
 <link rel="stylesheet" href="css/font-awesome.min.css" type="text/css">
@@ -41,6 +44,23 @@
 <link rel="stylesheet" href="css/style.css" type="text/css">
 
 </head>
+
+<style type="text/css">
+	/* select 세모 아이콘 변경 */
+   	 select{
+   	 	border:none; /* 태두리 없애기 */
+   	 	
+		/* -moz-appearance:none;
+		-webkit-appearance:none;  */
+		 /* appearance:none;  꺽쇠  */
+	}
+
+	
+	 /* select::-ms-expand{
+		 display:none; 
+	}  */   
+
+</style>
 
 <body>
 	<!-- Page Preloder -->
@@ -55,23 +75,37 @@
 				<div class="row">
 					<div class="col-lg-2 col-md-2"> <!-- row 1번 -->
 						<div class="logo">
-							<a href="index.jsp">
-								<img src="img/logo.png" alt="">
+							<a href="/">
+								<img src="img/apple-icon.png" alt="">
 							</a>
 						</div>
 					</div>
+					
 					<div class="col-lg-7 col-md-7"> <!-- row 2번 -->
-						<div class="advanced-search">
-							<button type="button" class="category-btn">전체 검색</button>
-							<div class="input-group">
-								<input type="text" placeholder="상품명을 입력하세요.">
-								<button type="button">
-									<i class="ti-search"></i>
-								</button>
-							</div>
-							
-						</div>
+						<form action="shop.do" method="get"> <!-- 검색기능 -->
+							 <div class="advanced-search">
+								<%--
+								<div class="category-btn">
+									 <select  name="searchCondition" id="searchCondition"> <!-- 검색조건 searchCondition 속성값 -->
+										<c:forEach items="${conditionMap}" var="option">
+											<option value="${option.value}" >${option.key}</option>
+										</c:forEach>
+									</select> 
+								</div>
+								--%>
+								<div class="input-group">
+									<input type="text"  placeholder="상품명을 입력하세요." id="searchKeyword" name="searchKeyword" value="${searchKeyword}"> <!-- id="searchKeyword" name="searchKeyword" 둘중 하나를 입력하니 검색했던 기록이 뜬다 -->
+									<button type="submit"><i class="ti-search"></i></button>
+								</div>					
+							 </div>
+						</form>
 					</div>
+					<%--  <select id="searchCondition" name="searchCondition">
+								<c:forEach items="${conditionMap }">
+									<option value="${option.value }" >${option.key }</option>
+								</c:forEach>
+							</select> 
+					--%>
 					<div class="col-lg-3 text-right col-md-3"> <!-- row 3번 -->
 						<ul class="nav-right">
 							<li class="heart-icon"> 
@@ -171,7 +205,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="nav-item">
+		<div class="nav-item" align="center">
 			<div class="container">
 				<!-- 반응형 -->
 				<nav class="nav-menu mobile-menu" style="">					

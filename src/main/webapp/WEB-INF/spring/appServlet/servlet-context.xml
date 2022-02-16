@@ -13,7 +13,7 @@
 		<beans:property name="suffix" value=".jsp" />
 	</beans:bean>
 	
-	<context:component-scan base-package="com.springcompany.prz" />
+	<context:component-scan base-package="com.oreot.prz" />
 	
 	<!-- 파일 업로드 설정 -->
 	<beans:bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver"> <!-- id 이름을 설정하지 않으면 식별자 디폴트는 commonsMultipartResolver(소문자로 시작) 참조변수의 이름도 이렇게 사용하는 것이 일반적. 여기서 id="multipartResolver" 이것으로 고정-->

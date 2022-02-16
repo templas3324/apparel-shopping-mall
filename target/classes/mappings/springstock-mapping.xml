@@ -11,6 +11,7 @@
 	]]>
 	</insert>
 	
+	<!-- 장바구니에 추가 -->
 	<insert id="insertBasketInfo">
 	<![CDATA[
 		INSERT INTO BASKETS (BASKET_NUM,MEMBER_NUM,OPTION_NUM,BASKET_AMOUNT)
@@ -18,26 +19,30 @@
 	]]>
 	</insert>
 	
+	<!-- 관심상품 등록 -->
 	<insert id="getInterests">
 	<![CDATA[
-		INSERT INTO INTERESTS (INTEREST_NUM,MEMBER_NUM,OPTION_NUM)
-    	VALUES((SELECT NVL(MAX(INTEREST_NUM),0)+1 FROM INTERESTS),#{memberNum},#{optionNum});
+		INSERT INTO INTERESTS (INTEREST_NUM,MEMBER_NUM,OPTION_NUM) 
+    	VALUES((SELECT NVL(MAX(INTEREST_NUM),0)+1 FROM INTERESTS),#{memberNum},#{optionNum})
 	]]>
 	</insert>
 	
+	<!-- 관심상품 삭제 -->
 	<delete id="deleteInterests">
 	<![CDATA[
 		DELETE FROM INTERESTS
 			WHERE MEMBER_NUM=#{memberNum} AND OPTION_NUM=#{optionNum}
 	]]>
 	</delete>
+	
 	<select id="getMemberNum" resultType="_int">
 	<![CDATA[
 		select MEMBER_NUM from MEMBERS where MEMBER_ID=#{id}
 	]]>
 	</select>
 	
-	<select id="getInterestInfo" resultType="com.springcompany.biz.stock.dao.StockVO">
+	<!-- 관심상품 정보불러오기 -->
+	<select id="getInterestInfo" resultType="com.oreot.biz.stock.dao.StockVO">
 	<![CDATA[
 		SELECT
 			T1.STOCK_PHOTO as stockPhoto, -- 상품사진
@@ -56,7 +61,8 @@
 	]]>
 	</select>
 	
-	<select id="getBasketInfo" resultType="com.springcompany.biz.stock.dao.StockVO">
+	<!-- 장바구니 정보 불러오기 -->
+	<select id="getBasketInfo" resultType="com.oreot.biz.stock.dao.StockVO">
 	<![CDATA[
 		SELECT 
 			T2.STOCK_PHOTO as stockPhoto, -- 상품사진
@@ -77,7 +83,7 @@
 	</select>
 	
 	<!-- 대카테고리별 상품 리스트 -->
-	<select id="getstockL" resultType="com.springcompany.biz.stock.dao.StockVO">
+	<select id="getstockL" resultType="com.oreot.biz.stock.dao.StockVO">
 	<![CDATA[
 
 		SELECT
@@ -97,7 +103,7 @@
 	</select> <!-- 컬럼: T2.OPTION_COLOR,     GROUP BY : T2.OPTION_COLOR,  LEFT OUTER JOIN OPTIONS T2 ON T1.STOCK_NUM = T2.STOCK_NUM -->
 	
 	<!-- 소카테고리별 상품 리스트 -->
-	 <select id="getstockS" resultType="com.springcompany.biz.stock.dao.StockVO"> 
+	 <select id="getstockS" resultType="com.oreot.biz.stock.dao.StockVO"> 
 	 <![CDATA[
 		SELECT
 		    T1.STOCK_NUM as stockNum,       
@@ -115,7 +121,7 @@
 	</select> 
 	
 	<!-- 상품 상세정보 	-->
-	<select id="getproduct" resultType="com.springcompany.biz.stock.dao.StockVO">
+	<select id="getproduct" resultType="com.oreot.biz.stock.dao.StockVO">
 	<![CDATA[
 		SELECT
 			s.stock_num as stockNum,
@@ -132,5 +138,24 @@
 	]]>
 	</select>	
 
+	<!-- 검색 상품 정보 -->
+	<select id="getstockKeyword" resultType="com.oreot.biz.stock.dao.StockVO">
+	<![CDATA[
+		SELECT
+		    T1.STOCK_NUM as stockNum,       
+		    T1.STOCK_PHOTO as stockPhoto,
+		    T1.STOCK_NAME as stockName, 
+		    T1.STOCK_PRICE as stockPrice,
+		    COUNT(DISTINCT T4.REVIEW_NUM) as reviewNum
+		FROM STOCKS T1
+		    left outer join reviews t4 on t1.stock_num = t4.stock_num,
+		    (select sc.*, st.stock_num from scategories sc, stocks st where sc.scategories_num = st.scategories_num) t3
+	    where t1.stock_name like '%'||#{searchKeyword}||'%'
+	    GROUP BY T1.STOCK_NAME, T1.STOCK_PHOTO,  T1.STOCK_PRICE, T1.STOCK_NUM
+	    ORDER BY stockNum
+	    
+	
+	]]>
+	</select>
 	
 </mapper>
