@@ -29,6 +29,10 @@
 
 ![14](https://user-images.githubusercontent.com/83121895/149434476-d26da106-c0c4-4dd4-9fca-2cdc888786e5.png)
 
+![화면 캡처 2022-02-22 114634](https://user-images.githubusercontent.com/83121895/155053993-a1c56999-b242-4304-aa64-8e0efeb87bba.jpg)
+
+![화면 캡처 2022-02-22 114737](https://user-images.githubusercontent.com/83121895/155054014-651bc7c8-d221-4911-8eb0-1acba34e031b.jpg)
+
 ![화면 캡처 2022-02-04 200548](https://user-images.githubusercontent.com/83121895/152520053-818c6d26-3d43-4be7-ae7d-535c5cab90c7.png)
 
 ![화면 캡처 2022-02-04 200635](https://user-images.githubusercontent.com/83121895/152520090-7384ebc4-2fc2-45a4-a571-5b2fbc4b8306.png)
