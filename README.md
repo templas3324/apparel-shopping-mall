@@ -19,6 +19,7 @@
 대분류, 소분류 카테고리, 검색기능
 
 
+
 ![1](https://user-images.githubusercontent.com/83121895/149434418-8aa1abd4-10b9-458f-9bd8-4ca376865e2b.png)
 
 ![5](https://user-images.githubusercontent.com/83121895/149434436-5c1500af-fb83-4be5-9e29-bc7797cd2e48.png)
