@@ -18,7 +18,7 @@
 ### 프로젝트 기여 부분
 대분류, 소분류 카테고리, 검색기능
 
-
+###
 
 ![1](https://user-images.githubusercontent.com/83121895/149434418-8aa1abd4-10b9-458f-9bd8-4ca376865e2b.png)
 
